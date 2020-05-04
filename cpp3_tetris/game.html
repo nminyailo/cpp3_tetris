@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <h1 class="navbar-brand">Тетрис</h1>
+    </nav>
+    <div class="container">
+      <div class="left-menu">
+        <canvas id="preview" class="field" width="100" height="120"> </canvas>
+        <h4>Управление:</h4>
+        <div class="tips">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p>
+                <span class="badge badge-primary badge-pill"> ↑↓ </span> поворот
+              </p>
+            </li>
+            <li class="list-group-item">
+              <p>
+                <span class="badge badge-primary badge-pill"> →← </span>
+                перемещение
+              </p>
+            </li>
+            <li class="list-group-item">
+              <p>
+                <span class="badge badge-primary badge-pill"> Пробел </span>
+                бросить вниз
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <canvas id="canvas" class="field" width="200" height="400"> </canvas>
+
+      <div class="right-menu">
+        <table class="game-info">
+          <tr>
+            <th>Игрок:</th>
+            <td id="player"></td>
+          </tr>
+          <tr>
+            <th>Счет:</th>
+            <td id="score">0</td>
+          </tr>
+          <tr>
+            <th>Уровень:</th>
+            <td id="level">0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div
+      id="highscore"
+      class="modal fade bd-example-modal-lg"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Игра завершена.</h5>
+          </div>
+          <div class="modal-body">
+            <table id="scoreboard-table">
+              <tr>
+                <th>Дата</th>
+                <th>Игрок</th>
+                <th>Уровень</th>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Закрыть
+            </button>
+            <button id="reboot" type="button" class="btn btn-primary">
+              Новая игра!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="js/Highscore.js"></script>
+    <script type="text/javascript" src="js/Board.js"></script>
+    <script type="text/javascript" src="js/tetris.js"></script>
+    <script type="text/javascript" src="js/shapes.js"></script>
+    <script type="text/javascript" src="js/colors.js"></script>
+  </body>
+</html>

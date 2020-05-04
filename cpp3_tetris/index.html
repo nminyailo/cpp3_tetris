@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+
+  <body >
+    <div class="col-md-4" align="center">
+      <h1 >ТЕТРИС</h1>
+      <form action="game.html" method="GET" onsubmit="storeUsername()">
+        <div class="form-group">
+          <label class="col-md-4">Введите имя игрока:</label>
+        </div>
+        <input
+          id="username"
+          class="form-control"
+          required
+          type="text"
+          placeholder="Ну же, вводите имя"
+          minlength="1"
+          maxlength="100"
+        />
+        <br />
+        <button type="submit" class="btn btn-primary">Начать игру!</button>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="js/username.js"></script>
+  </body>
+</html>

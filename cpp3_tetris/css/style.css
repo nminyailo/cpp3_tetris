@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+body {
+  background-color: black;
+}
+canvas {
+  border: 2px solid;
+  margin: 10px;
+}
+
+.left-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 30px;
+}
+
+.right-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+
+.game-info th,
+.game-info td {
+  font-size: large;
+  padding-right: 10px;
+}
+
+.tips p {
+  margin-top: 10px;
+  padding-right: 20px;
+  word-spacing: 10px;
+}
+
+#scoreboard-table {
+  min-width: 400px;
+}
+
+#scoreboard-screen *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#scoreboard-table td th {
+  text-align: center;
+}
+.left-menu h4 {
+  margin: 50px 0 10px 0;
+}
